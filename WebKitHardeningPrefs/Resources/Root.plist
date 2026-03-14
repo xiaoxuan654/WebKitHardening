@@ -3,111 +3,105 @@
 <plist version="1.0">
 <dict>
 	<key>title</key>
-	<string>WebKit Hardening</string>
+	<string>WebKit 加固</string>
 	<key>items</key>
 	<array>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Hardening</string>
+			<string>开关</string>
+			<key>footerText</key>
+			<string>修改设置后，点击下方按钮结束 WebKitWebContent 以生效。</string>
 		</dict>
 
 		<dict>
 			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>default</key>
-			<true/>
+			<false/>
 			<key>defaults</key>
 			<string>com.xiaoxuan654.webkitHardening</string>
+			<key>get</key>
+			<string>readPreferenceValue:</string>
 			<key>key</key>
 			<string>EnableHardening</string>
 			<key>label</key>
-			<string>Enable Hardening</string>
-			<key>PostNotification</key>
-			<string>com.xiaoxuan654.webkitHardening/ReloadPrefs</string>
+			<string>启用加固</string>
+			<key>set</key>
+			<string>setPreferenceValue:specifier:</string>
 		</dict>
 
 		<dict>
 			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>default</key>
-			<true/>
+			<false/>
 			<key>defaults</key>
 			<string>com.xiaoxuan654.webkitHardening</string>
+			<key>get</key>
+			<string>readPreferenceValue:</string>
 			<key>key</key>
 			<string>DisableJIT</string>
 			<key>label</key>
-			<string>Disable JIT</string>
-			<key>PostNotification</key>
-			<string>com.xiaoxuan654.webkitHardening/ReloadPrefs</string>
+			<string>禁用 JIT</string>
+			<key>set</key>
+			<string>setPreferenceValue:specifier:</string>
 		</dict>
 
 		<dict>
 			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>default</key>
-			<true/>
+			<false/>
 			<key>defaults</key>
 			<string>com.xiaoxuan654.webkitHardening</string>
+			<key>get</key>
+			<string>readPreferenceValue:</string>
 			<key>key</key>
 			<string>DisableWebAssembly</string>
 			<key>label</key>
-			<string>Disable WebAssembly</string>
-			<key>PostNotification</key>
-			<string>com.xiaoxuan654.webkitHardening/ReloadPrefs</string>
+			<string>禁用 WebAssembly</string>
+			<key>set</key>
+			<string>setPreferenceValue:specifier:</string>
 		</dict>
 
 		<dict>
 			<key>cell</key>
 			<string>PSSwitchCell</string>
 			<key>default</key>
-			<true/>
+			<false/>
 			<key>defaults</key>
 			<string>com.xiaoxuan654.webkitHardening</string>
+			<key>get</key>
+			<string>readPreferenceValue:</string>
 			<key>key</key>
 			<string>BlockJITMemory</string>
 			<key>label</key>
-			<string>Block JIT Memory</string>
-			<key>PostNotification</key>
-			<string>com.xiaoxuan654.webkitHardening/ReloadPrefs</string>
+			<string>阻止 JIT 可执行内存</string>
+			<key>set</key>
+			<string>setPreferenceValue:specifier:</string>
 		</dict>
 
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Status</string>
+			<string>生效</string>
 			<key>footerText</key>
-			<string>Updated when WebKitWebContent loads the tweak.</string>
+			<string>结束 WebKitWebContent 后，Safari/所有 WebView 下次使用时会自动拉起新进程。</string>
 		</dict>
 
 		<dict>
 			<key>cell</key>
-			<string>PSTitleValueCell</string>
-			<key>default</key>
-			<string>Never</string>
-			<key>defaults</key>
-			<string>com.xiaoxuan654.webkitHardening</string>
-			<key>key</key>
-			<string>LastLoaded</string>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>restartWebKitWebContent</string>
+			<key>isDestructive</key>
+			<true/>
 			<key>label</key>
-			<string>Last Loaded</string>
-		</dict>
-
-		<dict>
-			<key>cell</key>
-			<string>PSTitleValueCell</string>
-			<key>default</key>
-			<string>Unknown</string>
-			<key>defaults</key>
-			<string>com.xiaoxuan654.webkitHardening</string>
-			<key>key</key>
-			<string>LastLoadedPID</string>
-			<key>label</key>
-			<string>Last PID</string>
+			<string>结束 WebKitWebContent 以生效修改</string>
 		</dict>
 	</array>
 </dict>
 </plist>
-
