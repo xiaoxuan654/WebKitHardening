@@ -1,0 +1,9 @@
+Package: com.xiaoxuan654.webkithardening
+Name: WebKitHardening
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Hardening WebKit by disabling JSC JIT/WebAssembly and blocking JIT memory toggles.
+Maintainer: xiaoxuan654
+Author: xiaoxuan654
+Section: Tweaks
+Depends: preferenceloader

@@ -1,0 +1,11 @@
+{
+  Filter = {
+    Executables = (
+      "WebKitWebContent"
+    );
+    Bundles = (
+      "com.apple.WebKit.WebContent"
+    );
+  };
+}
+

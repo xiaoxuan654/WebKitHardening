@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>WebKit Hardening</string>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Hardening</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.xiaoxuan654.webkitHardening</string>
+			<key>key</key>
+			<string>EnableHardening</string>
+			<key>label</key>
+			<string>Enable Hardening</string>
+			<key>PostNotification</key>
+			<string>com.xiaoxuan654.webkitHardening/ReloadPrefs</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.xiaoxuan654.webkitHardening</string>
+			<key>key</key>
+			<string>DisableJIT</string>
+			<key>label</key>
+			<string>Disable JIT</string>
+			<key>PostNotification</key>
+			<string>com.xiaoxuan654.webkitHardening/ReloadPrefs</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.xiaoxuan654.webkitHardening</string>
+			<key>key</key>
+			<string>DisableWebAssembly</string>
+			<key>label</key>
+			<string>Disable WebAssembly</string>
+			<key>PostNotification</key>
+			<string>com.xiaoxuan654.webkitHardening/ReloadPrefs</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.xiaoxuan654.webkitHardening</string>
+			<key>key</key>
+			<string>BlockJITMemory</string>
+			<key>label</key>
+			<string>Block JIT Memory</string>
+			<key>PostNotification</key>
+			<string>com.xiaoxuan654.webkitHardening/ReloadPrefs</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Status</string>
+			<key>footerText</key>
+			<string>Updated when WebKitWebContent loads the tweak.</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSTitleValueCell</string>
+			<key>default</key>
+			<string>Never</string>
+			<key>defaults</key>
+			<string>com.xiaoxuan654.webkitHardening</string>
+			<key>key</key>
+			<string>LastLoaded</string>
+			<key>label</key>
+			<string>Last Loaded</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSTitleValueCell</string>
+			<key>default</key>
+			<string>Unknown</string>
+			<key>defaults</key>
+			<string>com.xiaoxuan654.webkitHardening</string>
+			<key>key</key>
+			<string>LastLoadedPID</string>
+			<key>label</key>
+			<string>Last PID</string>
+		</dict>
+	</array>
+</dict>
+</plist>
+
