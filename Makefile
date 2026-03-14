@@ -8,6 +8,7 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = WebKitHardening
 WebKitHardening_FILES = Tweak.xm
+WebKitHardening_USE_MODULES = 0
 WebKitHardening_CFLAGS = -fobjc-arc
 WebKitHardening_CXXFLAGS = -fobjc-arc -std=c++17
 WebKitHardening_FRAMEWORKS = Foundation

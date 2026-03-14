@@ -1,5 +1,6 @@
 #import "Preferences/PSListController.h"
 #import "Preferences/PSSpecifier.h"
+#import <UIKit/UIKit.h>
 #import <dlfcn.h>
 #import <CoreFoundation/CoreFoundation.h>
 #import <notify.h>
@@ -9,6 +10,7 @@
 
 static CFStringRef const kPrefsID = CFSTR("com.xiaoxuan654.webkitHardening");
 static const char *const kExitNotify = "com.xiaoxuan654.webkitHardening/ExitWebContent";
+static const char *const kPrefsChangedNotify = "com.xiaoxuan654.webkitHardening/PrefsChanged";
 
 __attribute__((constructor))
 static void WebKitHardeningPrefsInit(void) {
@@ -69,6 +71,7 @@ static void WebKitHardeningPrefsInit(void) {
 
 	CFPreferencesSetAppValue((__bridge CFStringRef)key, (__bridge CFPropertyListRef)value, kPrefsID);
 	CFPreferencesAppSynchronize(kPrefsID);
+	notify_post(kPrefsChangedNotify);
 
 	// If the master switch changes, enable/disable dependent options.
 	if ([key isEqualToString:@"EnableHardening"]) {
@@ -101,6 +104,21 @@ static void WebKitHardeningPrefsInit(void) {
 	if (pid > 0) {
 		int status = 0;
 		waitpid(pid, &status, 0);
+	}
+}
+
+- (void)openGitHub {
+	NSURL *url = [NSURL URLWithString:@"https://github.com/xiaoxuan654"];
+	if (!url) return;
+
+	UIApplication *app = [UIApplication sharedApplication];
+	if ([app respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+		[app openURL:url options:@{} completionHandler:nil];
+	} else {
+		#pragma clang diagnostic push
+		#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+		[app openURL:url];
+		#pragma clang diagnostic pop
 	}
 }
 

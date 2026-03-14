@@ -102,6 +102,21 @@
 			<key>label</key>
 			<string>结束 WebKitWebContent 以生效修改</string>
 		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>作者 xiaoxuan654</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>openGitHub</string>
+			<key>label</key>
+			<string>xiaoxuan654</string>
+		</dict>
 	</array>
 </dict>
 </plist>
